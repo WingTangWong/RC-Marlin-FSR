@@ -1581,7 +1581,9 @@ void process_commands()
       
        home_delta_axis();
        deploy_z_probe(); 
-      
+     
+       // Let's make sure that Z is at 25mm 
+       
        //Probe all points
        bed_probe_all();
       
@@ -2688,6 +2690,10 @@ void process_commands()
              }
          break;
     #endif
+    case 777:
+         SERIAL_ECHO("Bed Pin Value:");
+         SERIAL_ECHOLN(TEMP_BED_PIN);
+         break;
     #ifdef FWRETRACT
     case 207: //M207 - set retract length S[positive mm] F[feedrate mm/sec] Z[additional zlift/hop]
     {
@@ -3850,3 +3856,8 @@ bool setTargetedHotend(int code){
   return false;
 }
 
+
+
+#ifdef FSR_BED_LEVELING
+
+#endif

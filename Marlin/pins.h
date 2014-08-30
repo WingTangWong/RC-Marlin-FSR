@@ -1365,11 +1365,11 @@
   #define TEMP_BED_PIN        0  // Bed / Analog pin numbering
 #endif
 
-#define TEMP_1_PIN         -1
-#define TEMP_2_PIN         -1
+#define TEMP_1_PIN         2
+#define TEMP_2_PIN         3 
 
 #define SDPOWER            -1
-#define SDSS                8
+#define SDSS              26
 #define LED_PIN            -1
 #define PS_ON_PIN          -1
 #define KILL_PIN           -1
